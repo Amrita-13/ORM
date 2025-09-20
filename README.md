@@ -28,19 +28,19 @@ models.py
 from django.db import models
 from django.contrib import admin
 class owner(models.Model):
-    Model=models.CharField(max_length=10)
+    mod_num=models.CharField(max_length=10)
     car_no=models.IntegerField(primary_key=True)
-    quality= models.CharField(max_length=10)
-    year_prod=models.IntegerField()
-    colour=models.CharField(max_length=10)
+    car_name= models.CharField(max_length=10)
+    price=models.IntegerField()
+    car_colour=models.CharField(max_length=10)
 class ownerAdmin(admin.ModelAdmin):
-    list_display=["model","car_no","quality","year_prod","colour"]
+    list_display=["mod_num","car_name","car_colour","car_no","price",]
 
 admin.py
 
 from django.contrib import admin
-from.models import owner,ownerAdmin
-admin.site.register(owner,ownerAdmin)
+from.models import car,carAdmin
+admin.site.register(car,carAdmin)
 
 ```
 ## OUTPUT
