@@ -34,7 +34,7 @@ class owner(models.Model):
     price=models.IntegerField()
     car_colour=models.CharField(max_length=10)
 class ownerAdmin(admin.ModelAdmin):
-    list_display=["mod_num","car_name","car_colour","car_no","price",]
+    list_display=["mod_num","car_name","car_colour","car_no","price"]
 
 admin.py
 
