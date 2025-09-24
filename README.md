@@ -27,13 +27,13 @@ models.py
 
 from django.db import models
 from django.contrib import admin
-class owner(models.Model):
+class car(models.Model):
     mod_num=models.CharField(max_length=10)
     car_no=models.IntegerField(primary_key=True)
     car_name= models.CharField(max_length=10)
     price=models.IntegerField()
     car_colour=models.CharField(max_length=10)
-class ownerAdmin(admin.ModelAdmin):
+class carAdmin(admin.ModelAdmin):
     list_display=["mod_num","car_name","car_colour","car_no","price"]
 
 admin.py
